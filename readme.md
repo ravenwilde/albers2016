@@ -1,5 +1,9 @@
 # Albers 2016
 
+A React-Redux experiment exploring the Albers Method of Color Theory.
+
+Special thanks to @wesbos Learn-Redux tutorial series for foundation that this is built on.
+
 ## Running
 
 First `npm install` to grab all the necessary dependencies. 

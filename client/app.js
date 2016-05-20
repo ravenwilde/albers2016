@@ -20,7 +20,7 @@ const router = (
 		<Router history={history}>
 			<Route path="/" component={App}>
 				<IndexRoute component={ExerciseIndex}></IndexRoute>
-				<Route path="/exercise/:postId" component={Exercise}></Route>
+				<Route path="/exercise/:exId" component={Exercise}></Route>
 			</Route>
 		</Router>
 	</Provider>

@@ -18,12 +18,12 @@ function postComments(state = [], action) {
 }
 
 function comments(state = [], action) {
-	if(typeof action.postId !== 'undefined') {
+	if(typeof action.exId !== 'undefined') {
 		return {
 			// take current state
 			...state,
 			// overwrite this post with a new one
-			[action.postId]: postComments(state[action.postId], action)
+			[action.exId]: postComments(state[action.exId], action)
 		}		
 	}
 	return state;

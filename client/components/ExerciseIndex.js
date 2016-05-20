@@ -1,11 +1,11 @@
 import React from 'react';
-import ExPreview from './ExPreview';
+import Exercise from './Exercise';
 
 const ExerciseIndex = React.createClass({
 	render() {
 		return (
 			<div className="exercise-index">
-				{this.props.posts.map((post, i) => <ExPreview {...this.props} key={i} i={i} post={post} /> )}
+				{this.props.exercises.map((exercise, i) => <Exercise {...this.props} key={i} i={i} exercise={exercise} /> )}
 			</div>
 		)
 	}

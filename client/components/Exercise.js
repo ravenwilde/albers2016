@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Study from './Study';
 
 const Exercise = React.createClass({
@@ -9,10 +10,20 @@ const Exercise = React.createClass({
 
 		return (
 			<div className="exercise">
-				<h2>{ exercise.header }</h2>
-				<p>{ exercise.objective }</p>
-				<p>{ exercise.notes }</p>
-				{exercise.studies.map((study, i) => <Study {...this.props} key={i} i={i} exId={exId} study={study} /> )}
+				<nav>
+					<Link to="/">&lsaquo; Albers 2016</Link>
+				</nav>
+				<header>
+					<p className="exercise-tag">Exercise { exercise.id }</p>
+					<h1>{ exercise.header }</h1>
+				</header>
+				<div className="body-text">
+					<p>{ exercise.objective }</p>
+					<p>{ exercise.notes }</p>
+				</div>
+				<div className="studies-list">
+					{exercise.studies.map((study, i) => <Study {...this.props} key={i} i={i} exId={exId} study={study} /> )}
+				</div>
 			</div>
 		)
 	}

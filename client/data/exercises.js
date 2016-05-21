@@ -1,6 +1,7 @@
 const exercises = [
 	{
 		'id': '1',
+		'title': 'Color Relativity',
 		'header': '"Color is the most relative medium in art"',
 		'objective': 'Ex 1 Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim.',
 		'notes': 'Ex 1 Created with HTML5 Canvas',
@@ -39,6 +40,7 @@ const exercises = [
 	},
 	{
 		'id': '2',
+		'title': 'Another Title',
 		'header': '"Another Quote By Albers"',
 		'objective': 'Ex 2 Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim.',
 		'notes': 'Ex 2 Created with HTML5 Canvas',

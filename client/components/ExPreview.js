@@ -14,7 +14,7 @@ const ExPreview = React.createClass({
 					<div className="exercise-preview-study">
 						<Study key={i} i={i} exId={exId} study={study} {...this.props} />
 					</div>
-					<p>Exercise {exercise.id}</p>
+					<p>Exercise {exercise.id}: {exercise.title}</p>
 				</div>
 			</Link>
 		)

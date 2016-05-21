@@ -26,9 +26,10 @@ module.exports = {
     },
     // CSS
     { 
-      test: /\.styl$/, 
+      test: /\.scss$/, 
       include: path.join(__dirname, 'client'),
-      loader: 'style-loader!css-loader!stylus-loader'
+      //loader: 'style-loader!css-loader!stylus-loader'
+      loaders: ['style', 'css', 'sass']
     }
     ]
   }

@@ -1,0 +1,124 @@
+// MIXINS
+
+/// Gives a card depth effect.
+/// @param {Number} $depth - depth level (between 1 and 5)
+/// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+/// @requires {function} top-shadow
+/// @requires {function} bottom-shadow
+@mixin card($depth) {
+  @if $depth < 1 {
+    box-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);  
+  }
+}
+/// Computes a top-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function top-shadow($depth) {
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/// Computes a bottom-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function bottom-shadow($depth) {
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+// Better Retina-Image
+@mixin better-retina-image($filename, $background-size, $extension: png, $retina-filename: null, $retina-suffix: _2x) {
+
+	background-image:       url("../img/#{$filename}.#{$extension}");
+	background-size: $background-size;
+
+	@include hidpi {
+
+		@if $retina-filename {
+			background-image: url("../img/#{$retina-filename}.#{$extension}");
+			}
+		@else {
+			background-image: url("../img/#{$filename}#{$retina-suffix}.#{$extension}");
+			}
+		background-size: $background-size;
+
+	}
+}
+
+// OMEGA RESET - resets Neat's Omega mixin
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) {
+    margin-right: flex-gutter(12);
+    }
+  &:nth-child(#{$nth}+1) {
+    clear: none;
+  }
+}
+
+// PUSH RIGHT - Pushes a Neat element to the right side of the grid regardless of DOM order
+@mixin push-right() {
+  float: right;
+  margin-right: 0;
+}
+
+// Breakpoint Highlight - for testing and development work
+@mixin highlight-breakpoint {
+
+	background-color: darkred;
+
+	@include media($mobile-large-screen-up) {
+		background-color: red;
+	}
+	@include media($tablet-small-screen-up) {
+		background-color: orange;
+	}
+	@include media($medium-screen-up) {
+		background-color: yellow;
+	}
+	@include media($medium-large-screen-up) {
+		background-color: greenyellow;
+	}
+	@include media($large-screen-up) {
+		background-color: limegreen;
+	}
+	@include media($x-large-screen-up) {
+		background-color: greenyellow;
+	}
+	@include media($xx-large-screen-up) {
+		background-color: deepskyblue;
+	}
+	@include media($super-large-screen-up) {
+		background-color: dodgerblue;
+	}
+
+}
+// Visually Hidden - Visually hides but does not remove
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &:active,
+  &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+  }
+}

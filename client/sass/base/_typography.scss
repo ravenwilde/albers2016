@@ -1,0 +1,142 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+// headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $base-spacing;
+}
+h1 {
+  font-family: $serif-1;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+
+  @include media($medium-screen-up) {
+    font-size: 2.6em;
+  }
+}
+h2 {
+  font-family: $serif-2;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin-bottom: 0.9em;
+
+  @include media($medium-screen-up) {
+    font-size: 1.2em;
+  }
+}
+h3 {
+  font-family: $serif-1;
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 0.4em;
+}
+
+// body text
+p {
+  margin: 0 0 $base-spacing;
+  font-family: $serif-2;
+  font-size: 0.9em;
+  line-height: 1.6em;
+
+  span {
+    font-family: $sans-serif;
+    font-weight: 700;
+  }
+}
+
+// links
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+
+  &.read-more {
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-left: 0.2em;
+    position: relative;
+    text-transform: uppercase;
+
+    span {
+      font-family: $serif-1;
+      font-size: 1.5em;
+      font-style: normal;
+      position: absolute;
+      right: -12px;
+      top: -1px;
+    }
+  }
+}
+
+// special styles
+
+.exercise-tag {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: $sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin-bottom: 2em;
+  padding: 0.3em 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+.author {
+  font-family: $serif-2;
+  font-style: italic;
+}
+.date {
+  color: transparentize($base-font-color, 0.6);
+  font-family: $serif-2;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 0.3em;
+}
+
+// additional
+
+code {
+  background: #F7F7F7;
+  border-radius: $base-border-radius * 1.5;
+  border: 1px solid #E0E0E0;
+  font-family: monaco;
+  font-size: 0.75em;
+  font-style: normal;
+  padding: 0.1em 0.4em;
+  white-space: nowrap;
+}
+
+hr {
+  border-bottom: 1px solid $light-gray;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+  width: 3em;
+}
+
+

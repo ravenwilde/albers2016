@@ -1,0 +1,37 @@
+@import "../neat/neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+
+// Neat Overrides
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 12;
+// $max-width: 1200px;
+
+// Neat Breakpoints
+$mobile-large-screen: em(480);
+$tablet-small-screen: em(560);
+$medium-screen: em(640);
+$medium-large-screen: em(750);
+$large-screen: em(860);
+$x-large-screen: em(970);
+$xx-large-screen: em(1088);
+$super-large-screen: em(1280);
+
+// darkred
+// red
+$mobile-large-screen-up: new-breakpoint(min-width $mobile-large-screen 6);
+// orange
+$tablet-small-screen-up: new-breakpoint(min-width $tablet-small-screen 6);
+
+// yellow
+$medium-screen-up: new-breakpoint(min-width $medium-screen 12);
+// greenyellow
+$medium-large-screen-up: new-breakpoint(min-width $medium-large-screen 12);
+
+// limegreen
+$large-screen-up: new-breakpoint(min-width $large-screen 12);
+// greenyellow
+$x-large-screen-up: new-breakpoint(min-width $x-large-screen 12);
+// deepskyblue
+$xx-large-screen-up: new-breakpoint(min-width $xx-large-screen 12);
+// dodgerblue
+$super-large-screen-up: new-breakpoint(min-width $super-large-screen 12);

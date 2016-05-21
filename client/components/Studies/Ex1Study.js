@@ -2,11 +2,13 @@ import React from 'react';
 
 const Ex1Study = React.createClass({
 	render() {	
+		const { study, i } = this.props;
 		return (
 			<div className="study">
-				<p>This is a study for Exercise {this.props.exercise.id}</p>
+				<p>Ex 1 Study</p>
+				{study.colors.map((color, i) => <p key={i}>{color}</p> )}
 			</div>
-		)
+		);
 	}
 });
 

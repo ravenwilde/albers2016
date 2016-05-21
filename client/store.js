@@ -7,7 +7,7 @@ import rootReducer from './reducers/index';
 
 import exercises from './data/exercises';
 
-// create an object fro the default data
+// create an object for the default data
 const defaultState = {
 	exercises,
 };

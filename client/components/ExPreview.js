@@ -1,33 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
+
+import Study from './Study';
 
 const ExPreview = React.createClass({
 	render() {
-		const {post, i, comments} = this.props;
+		const {exercise, i} = this.props;
+		const study = exercise.studies[0];
+		const exId = exercise.id;
 		return (
-			<figure className="grid-figure">
-				<div className="grid-photo-wrap">
-					<Link to={`/exercise/${post.code}`}>
-						<img src={post.display_src} alt={post.caption} className="grid-photo"/>
-					</Link>
-					<CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-						<span key={post.likes} className="likes-heart">{post.likes}</span>
-					</CSSTransitionGroup>
+			<Link to={`/exercise/${exercise.id}`}>
+				<div className="exercise-preview">
+					<div className="exercise-preview-study">
+						<Study key={i} i={i} exId={exId} study={study} {...this.props} />
+					</div>
+					<p>Exercise {exercise.id}</p>
 				</div>
-				<figcaption>
-		          <p>{post.caption}</p>
-		          <div className="control-buttons">
-		            <button onClick={this.props.increment.bind(null, i)} className="likes">&hearts; {post.likes}</button>
-		            <Link className="button" to={`/exercise/${post.code}`}>
-		              <span className="comment-count">
-		                <span className="speech-bubble"></span>
-		                {comments[post.code] ? comments[post.code].length : 0 }
-		              </span>
-		            </Link>
-		          </div>
-		        </figcaption>
-			</figure>
+			</Link>
 		)
 	}
 });

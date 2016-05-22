@@ -8,7 +8,7 @@
 
 // for testing
 h1, h2 {
-//	@include highlight-breakpoint;
+	@include highlight-breakpoint;
 }
 .exercise-index,
 .exercise {
@@ -26,17 +26,51 @@ h1, h2 {
 	.body-text,
 	.exercise-list {
 		@include span-columns(12);
+	
+		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(8);
+			@include shift(1);
+		}
 	}
-	@include media($medium-screen-up) {
-		@include span-columns(10);
-		@include shift(1);
-	}
-	@include media($large-screen-up) {
-		@include span-columns(9);
-		@include shift(1);
-	}
-	@include media($x-large-screen-up) {
+}
+@include media($x-large-screen-up) {
+	.exercise-index header {
 		@include span-columns(6);
 		@include shift(0);
+	}
+	.exercise-index .body-text,
+	.exercise-index .exercise-list {
+		@include span-columns(6);
+		@include shift(0);
+	}
+}
+@include media($xx-large-screen-up) {
+	.exercise-index header {
+		@include span-columns(6);
+		@include shift(1);
+	}
+	.exercise-index .body-text {
+		@include span-columns(5);
+		@include shift(1);
+	}
+	.exercise-index .exercise-list {
+		@include span-columns(6);
+	}
+}
+@include media($super-large-screen-up) {
+	.exercise-index header {
+		@include span-columns(6);
+		@include shift(1);
+	}
+	.exercise-index .body-text {
+		@include span-columns(4);
+		@include shift(1);
+	}
+	.exercise-index .exercise-list {
+		@include span-columns(6);
 	}
 }

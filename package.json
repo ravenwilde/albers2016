@@ -44,6 +44,7 @@
     "redbox-react": "^1.2.3",
     "redux": "^3.5.2",
     "rimraf": "^2.5.2",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
@@ -51,8 +52,11 @@
   "devDependencies": {
     "expect": "^1.18.0",
     "expect-jsx": "^2.5.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "mocha": "^2.4.5",
+    "node-sass": "^3.7.0",
     "pug": "^0.1.0",
-    "react-addons-test-utils": "^15.0.2"
+    "react-addons-test-utils": "^15.0.2",
+    "sass-loader": "^3.2.0"
   }
 }

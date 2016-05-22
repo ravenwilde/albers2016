@@ -15,7 +15,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 
-require('./sass/style.scss');
+require('../css/style.css');
 
 const router = (
 	<Provider store={store}>

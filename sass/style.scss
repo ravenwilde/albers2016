@@ -1,0 +1,42 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "mixins";
+@import "normalize";
+@import "base/base";
+
+// Layouts
+
+// for testing
+h1, h2 {
+//	@include highlight-breakpoint;
+}
+.exercise-index,
+.exercise {
+	@include outer-container;
+	padding: $base-spacing $small-spacing;
+	@include media($medium-screen-up) {
+		padding: $base-spacing;
+	}
+	@include media($medium-screen-up) {
+		padding: ($base-spacing*2) $base-spacing;
+	}
+}
+.exercise-index { 
+	header,
+	.body-text,
+	.exercise-list {
+		@include span-columns(12);
+	}
+	@include media($medium-screen-up) {
+		@include span-columns(10);
+		@include shift(1);
+	}
+	@include media($large-screen-up) {
+		@include span-columns(9);
+		@include shift(1);
+	}
+	@include media($x-large-screen-up) {
+		@include span-columns(6);
+		@include shift(0);
+	}
+}

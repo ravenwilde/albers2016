@@ -18,19 +18,18 @@ module.exports = {
   ],
   module: {
     loaders: [
-    // js
-    {
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'client')
-    },
-    // CSS
-    { 
-      test: /\.scss$/, 
-      include: path.join(__dirname, 'client'),
-      //loader: 'style-loader!css-loader!stylus-loader'
-      loaders: ['style', 'css', 'sass']
-    }
+      // js
+      {
+        test: /\.js$/,
+        loaders: ['babel'],
+        include: path.join(__dirname, 'client')
+      },
+      // CSS
+      { 
+        test: /\.css$/, 
+        include: path.join(__dirname, 'css'),
+        loader: "style-loader!css-loader"
+      }
     ]
   }
 };

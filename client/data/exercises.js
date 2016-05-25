@@ -4,36 +4,46 @@ const exercises = [
 		'title': 'Color Relativity',
 		'header': '"Color is the most relative medium in art"',
 		'objective': 'Ex 1 Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim.',
-		'notes': 'Ex 1 Created with HTML5 Canvas',
+		'notes': 'Exercise 1 studies rendered with HTML5 Canvas',
 		'studies': [
 			{
 				'number': '1',
-				'colors': ["1-red", "blue", "green"]
+				'colors': ["#BD3C3C", "#C6ED23", "#A87E94"]
 
 			},
 			{
 				'number': '2',
-				'colors': ["1-blue", "green", "yellow"]
+				'colors': ["blue", "green", "yellow"]
 
 			},
 			{
 				'number': '3',
-				'colors': ["1-green", "yellow", "purple"]
+				'colors': ["#31707D", "#E5974E", "#D5FF26"]
 
 			},
 			{
 				'number': '4',
-				'colors': ["1-yellow", "purple", "orange"]
+				'colors': ["yellow", "purple", "orange"]
 
 			},
 			{
 				'number': '5',
-				'colors': ["1-purple", "orange", "red"]
+				'colors': ["purple", "orange", "red"]
 
 			},
 			{
 				'number': '6',
-				'colors': ["1-orange", "red", "blue"]
+				'colors': ["orange", "red", "blue"]
+
+			},
+			{
+				'number': '7',
+				'colors': ["purple", "orange", "red"]
+
+			},
+			{
+				'number': '8',
+				'colors': ["orange", "red", "blue"]
 
 			}
 		] 

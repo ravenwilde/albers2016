@@ -19,10 +19,13 @@ const Exercise = React.createClass({
 				</header>
 				<div className="body-text">
 					<p>{ exercise.objective }</p>
-					<p>{ exercise.notes }</p>
+					<hr />
+					<p className="foot-note">{ exercise.notes }</p>
 				</div>
-				<div className="studies-list">
-					{exercise.studies.map((study, i) => <Study {...this.props} key={i} i={i} exId={exId} study={study} /> )}
+				<div className="studies-list-container">
+					<div className="studies-list">
+						{exercise.studies.map((study, i) => <div className="study-wrapper" key={i}><Study {...this.props} key={i} i={i} exId={exId} study={study} /></div> )}
+					</div>
 				</div>
 			</div>
 		)

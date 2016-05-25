@@ -18,7 +18,7 @@ h6 {
   margin: 0 0 $base-spacing;
 }
 h1 {
-  font-family: $serif-2;
+  // font-family: $serif-2;
   font-size: 2em;
   font-weight: 700;
   margin-bottom: 0.5em;
@@ -28,7 +28,7 @@ h1 {
   }
 }
 h2 {
-  font-family: $serif-2;
+  //font-family: $serif-2;
   font-size: 1em;
   //font-style: italic;
   font-weight: 400;
@@ -40,7 +40,7 @@ h2 {
   }
 }
 h3 {
-  font-family: $serif-2;
+  //font-family: $serif-2;
   font-size: 1.4em;
   font-weight: 400;
   line-height: 1.3em;
@@ -105,7 +105,8 @@ a {
   text-align: left;
   text-transform: uppercase;
 }
-.author {
+.foot-note {
+  color: transparentize($base-font-color, 0.6);
   font-family: $serif-2;
   font-style: italic;
 }
